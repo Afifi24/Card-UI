@@ -78,7 +78,6 @@ const Card = ({ direction, data }) => {
     <>
       <div className={`p-6 flex  ${Styles}  gap-10  rounded-2xl bg-gray-100`}>
         <div className={`relative w-full  ${desc && 'md:w-1/3'}`}>
-        {/* md:w-1/3 */}
           <ImagesSlide slideImages={slideImages} />
           {!desc && (
             <div
