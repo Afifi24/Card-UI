@@ -1,14 +1,31 @@
 import React from "react";
 import Cards from "./components/Cards/Cards";
-import Slide from './components/Slide/Slide.jsx'
+import { RowCardsData,ColCardsData } from "./data/Data";
 const App = () => {
   return (
     <div className=" min-h-screen flex flex-col  gap-4 font-Nunito bg-gray-300 ">
-      {/* <Cards image={image1} desc={'4-6 voyageurs: Logemenet entiere .5 Lits .3 Salles de bain Wifi.Cuisine. Parking Gratuit'} direction={'row'} width={'full'} country={'Rabat'} title={'Riad Villa'} stars={'4.99'} price={'300'} /> */}
-
-      {/* <Cards image={image1} desc={''} direction={'default'} width={'default'} country={'Marrakech'} title={'Villa Massira'} stars={'3.16'} price={'150'} /> */}
-      <Slide/>
-      
+      {/* <Cards CardsData={CardsData}  direction={'row'} width={'full'}  /> */}
+      {/* <Cards CardsData={CardsData} direction={"default"} width={"default"} /> */}
+      <div className="grid grid-cols-1 p-6 gap-4">
+        {RowCardsData.map((card) => (
+          <Cards
+            card={card}
+            direction={"row"}
+            width={"full"}
+            key={card.id}
+          />
+        ))}
+        <div className="grid  md:grid-cols-2  lg:grid-cols-3 2xl:grid-cols-4  gap-4">
+        {ColCardsData.map((card) => (
+          <Cards
+            card={card}
+            direction={"default"}
+            width={"default"}
+            key={card.id}
+          />
+        ))}
+        </div>
+      </div>
     </div>
   );
 };

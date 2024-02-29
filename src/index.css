@@ -16,11 +16,9 @@
     padding: 0;
     margin: 0;
 }
-.swiper-pagination{
-  
-}
+
 .swiper-pagination-bullet{
-    background-color: white;
+    background-color: #DDDDDD;
     
 }
 
@@ -35,3 +33,25 @@
 color: white;
 background-color: yellow;
 } */
+.swiper-button-prev{
+    color: rgb(213, 212, 212);
+    display: none;
+    transition: 500ms;
+
+    
+}
+.swiper-button-next{
+    color: rgb(213, 212, 212);
+    display: none;
+    transition: 500ms;
+
+    
+}
+.swiper:hover .swiper-button-next{
+    display: block;
+    transition: 500ms;
+}
+.swiper:hover .swiper-button-prev{
+    display: block;
+    transition: 500ms;
+}
