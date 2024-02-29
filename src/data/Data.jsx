@@ -288,3 +288,40 @@ export const ColCardsData=
     },
 
 ]
+
+
+
+export const data =  
+  {
+    
+    id:uuidv4(),
+    slideImages:[
+       {
+        id:uuidv4(),
+        image:image16,
+      },
+       {
+        id:uuidv4(),
+        image:image17,
+      },
+       {
+        id:uuidv4(),
+        image:image18,
+      },
+       {
+        id:uuidv4(),
+        image:image19,
+      },
+       {
+        id:uuidv4(),
+        image:image20,
+      },
+       
+    ],
+    country:'Ottawa',
+    title: 'Cold Villa',
+    stars:'4.96',
+    price :'800',
+    desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, aut necessitatibus?',
+}
+
