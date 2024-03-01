@@ -5,7 +5,7 @@ import outlinedHeart from "../../assets/outlinedHeart.png";
 import whiteheart from "../../assets/heart.png";
 import outlinedheartblack from "../../assets/heart2.png";
 
-// slide
+// todo Slide
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -61,12 +61,9 @@ const ImagesSlide = ({slideImages}) => {
 const Card = ({ direction, data }) => {
   const directionStyle = {
     row: "md:flex-row flex-col",
-    default: "flex-col",
+    default: "flex-col w-[400px]",
   }; 
-  const widthStyle = {
-    fullWidth:'',
-    default:'w-full'
-  }
+  
   const Styles = ` ${directionStyle[direction] || directionStyle.default}`;
   const { title, price, stars, desc, country, slideImages } = data;
   const [isLiked, setIsLiked] = useState(false);
@@ -77,7 +74,7 @@ const Card = ({ direction, data }) => {
   return (
     <>
       <div className={`p-6 flex  ${Styles}  gap-10  rounded-2xl bg-gray-100`}>
-        <div className={`relative w-full  ${desc && 'md:w-1/3'}`}>
+        <div className={`relative w-full  ${direction ==='row' && 'md:w-1/3'}`}>
           <ImagesSlide slideImages={slideImages} />
           {!desc && (
             <div
@@ -92,8 +89,7 @@ const Card = ({ direction, data }) => {
             </div>
           )}
         </div>
-        {/* w-2/3 */}
-        <div className={`"flex ${desc && 'md:w-2/3'}    justify-between items-start "`}>
+        <div className={`"flex ${ desc ==='row' && 'md:w-2/3'}    justify-between items-start "`}>
           <div className="flex flex-col w-full  gap-4">
             <div className="flex justify-between items-start w-full">
               <div className="">

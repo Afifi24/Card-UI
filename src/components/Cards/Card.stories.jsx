@@ -11,7 +11,6 @@ export default {
   args: {
     direction: "default",
     data:data,
-    // slideImages:ColCardsData.slideImages
   },
   argTypes: {
     direction: {
@@ -22,4 +21,4 @@ export default {
   },
 };
 
-export const Component = (args) =><div style={{display:'flex', alignItems:'center',justifyContent:'center'}}><Card {...args} /></div> ;
+export const Component = (args) =><div style={{margin:'10px'}}><Card {...args} /></div> ;

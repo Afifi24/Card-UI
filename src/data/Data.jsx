@@ -323,5 +323,6 @@ export const data =
     stars:'4.96',
     price :'800',
     desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, aut necessitatibus?',
+    isRow:true,
 }
 
